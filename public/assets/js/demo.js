@@ -1,10 +1,9 @@
-(function($) {
-  'use strict';
-  $(function() {
+'use strict';
 
-    if($('.perfect-scrollbar-example').length) {
-      var scrollbarExample = new PerfectScrollbar('.perfect-scrollbar-example');
-    }
+(function () {
 
-  });
-})(jQuery);
+  if (document.querySelector('.perfect-scrollbar-example')) {
+    var scrollbarExample = new PerfectScrollbar('.perfect-scrollbar-example');
+  }
+
+})();

@@ -1,9 +1,13 @@
+// npm package: flatpickr
+// github link: https://github.com/flatpickr/flatpickr
 
-$(function() {
-  'use strict';
+'use strict';
+
+(function () {
 
   // date picker 
-  if($('#flatpickr-date').length) {
+  const flatpickrDateEl = document.querySelector('#flatpickr-date');
+  if(flatpickrDateEl) {
     flatpickr("#flatpickr-date", {
       wrap: true,
       dateFormat: "Y-m-d",
@@ -12,7 +16,8 @@ $(function() {
 
 
   // time picker
-  if($('#flatpickr-time').length) {
+  const flatpickrTimeEl = document.querySelector('#flatpickr-time');
+  if(flatpickrTimeEl) {
     flatpickr("#flatpickr-time", {
       wrap: true,
       enableTime: true,
@@ -21,4 +26,4 @@ $(function() {
     });
   }
 
-});
+})();

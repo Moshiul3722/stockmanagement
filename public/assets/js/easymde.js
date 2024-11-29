@@ -1,12 +1,15 @@
+// npm package: easymde
+// github link: https://github.com/Ionaru/easy-markdown-editor
 
-$(function() {
-  'use strict';
+'use strict';
 
-  /*easymde editor*/
-  if ($("#easyMdeExample").length) {
-    var easymde = new EasyMDE({
-      element: $("#easyMdeExample")[0]
+(function () {
+
+  const easyMdeExample = document.querySelector('#easyMdeExample');
+  if (easyMdeExample) {
+    const easymde = new EasyMDE({
+      element: easyMdeExample
     });
   }
 
-});
+})();

@@ -1,6 +1,9 @@
+// npm package: jquery-tags-input
+// github link: https://github.com/xoxco/jQuery-Tags-Input
 
-$(function() {
-  'use strict';
+'use strict';
+
+(function () {
 
   $('#tags').tagsInput({
     'width': '100%',
@@ -13,4 +16,4 @@ $(function() {
     'placeholderColor': '#666666'
   });
 
-});
+})();

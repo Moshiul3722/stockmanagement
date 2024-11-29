@@ -1,14 +1,17 @@
+// npm package: cropperjs
+// github link: https://github.com/fengyuanchen/cropperjs
 
-$(function() {
-  'use strict';
+'use strict';
 
-  var croppingImage = document.querySelector('#croppingImage'),
-  img_w = document.querySelector('.img-w'),
-  cropBtn = document.querySelector('.crop'),
-  croppedImg = document.querySelector('.cropped-img'),
-  dwn = document.querySelector('.download'),
-  upload = document.querySelector('#cropperImageUpload'),
-  cropper = '';
+(function (){
+
+  const croppingImage = document.querySelector('#croppingImage'),
+    img_w = document.querySelector('.img-w'),
+    cropBtn = document.querySelector('.crop'),
+    croppedImg = document.querySelector('.cropped-img'),
+    dwn = document.querySelector('.download'),
+    upload = document.querySelector('#cropperImageUpload');
+  let cropper = '';
 
   cropper = new Cropper(croppingImage, {
     zoomable: false
@@ -18,7 +21,7 @@ $(function() {
   upload.addEventListener('change', function (e) {
     if (e.target.files.length) {
       console.log(e.target.files[0]);
-      var fileType = e.target.files[0].type;
+      const fileType = e.target.files[0].type;
       if(fileType === 'image/gif' || fileType === 'image/jpeg' || fileType === 'image/png') {
         cropper.destroy();
         // start file reader
@@ -50,4 +53,4 @@ $(function() {
     dwn.download = 'imagename.png';
   });
 
-});
+})();

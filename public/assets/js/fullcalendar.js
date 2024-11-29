@@ -1,17 +1,20 @@
+// npm package: fullcalendar
+// github link: https://github.com/fullcalendar/fullcalendar
 
-$(function() {
+'use strict';
+
+(function () {
+
+  const Draggable = FullCalendar.Draggable;
+  const calendarEl = document.getElementById('fullcalendar');
+  const containerEl = document.getElementById('external-events');
+
+  const curYear = moment().format('YYYY');
+  const curMonth = moment().format('MM');
 
   // sample calendar events data
-
-  var Draggable = FullCalendar.Draggable;
-  var calendarEl = document.getElementById('fullcalendar');
-  var containerEl = document.getElementById('external-events');
-
-  var curYear = moment().format('YYYY');
-  var curMonth = moment().format('MM');
-
   // Calendar Event Source
-  var calendarEvents = {
+  const calendarEvents = {
     id: 1,
     backgroundColor: 'rgba(1,104,250, .15)',
     borderColor: '#0168fa',
@@ -57,7 +60,7 @@ $(function() {
   };
 
   // Birthday Events Source
-  var birthdayEvents = {
+  const birthdayEvents = {
     id: 2,
     backgroundColor: 'rgba(16,183,89, .25)',
     borderColor: '#10b759',
@@ -87,7 +90,7 @@ $(function() {
   };
 
 
-  var holidayEvents = {
+  const holidayEvents = {
     id: 3,
     backgroundColor: 'rgba(241,0,117,.25)',
     borderColor: '#f10075',
@@ -113,7 +116,7 @@ $(function() {
     ]
   };
 
-  var discoveredEvents = {
+  const discoveredEvents = {
     id: 4,
     backgroundColor: 'rgba(0,204,204,.25)',
     borderColor: '#00cccc',
@@ -127,7 +130,7 @@ $(function() {
     ]
   };
 
-  var meetupEvents = {
+  const meetupEvents = {
     id: 5,
     backgroundColor: 'rgba(91,71,251,.2)',
     borderColor: '#5b47fb',
@@ -148,7 +151,7 @@ $(function() {
   };
 
 
-  var otherEvents = {
+  const otherEvents = {
     id: 6,
     backgroundColor: 'rgba(253,126,20,.25)',
     borderColor: '#fd7e14',
@@ -179,7 +182,7 @@ $(function() {
 
 
   // initialize the calendar
-  var calendar = new FullCalendar.Calendar(calendarEl, {
+  const calendar = new FullCalendar.Calendar(calendarEl, {
     headerToolbar: {
       left: "prev,today,next",
       center: 'title',
@@ -205,20 +208,20 @@ $(function() {
         // info.draggedEl.parentNode.removeChild(info.draggedEl);
     },
     eventClick: function(info) {
-      var eventObj = info.event;
       console.log(info);
-      $('#modalTitle1').html(eventObj.title);
-      $('#modalBody1').html(eventObj._def.extendedProps.description);
-      $('#eventUrl').attr('href',eventObj.url);
-      $('#fullCalModal').modal("show");
+      const eventObj = info.event;
+      document.querySelector('#modalTitle1').innerHTML = eventObj.title;
+      document.querySelector('#modalBody1').innerHTML = eventObj._def.extendedProps.description || '{ no description }';
+      const fullCalModal = new bootstrap.Modal('#fullCalModal');
+      fullCalModal.show();
     },
     dateClick: function(info) {
-      $("#createEventModal").modal("show");
       console.log(info);
+      const createEventModal = new bootstrap.Modal('#createEventModal');
+      createEventModal.show();
     },
   });
 
   calendar.render();
 
-
-});
+})();

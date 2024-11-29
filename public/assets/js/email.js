@@ -1,15 +1,33 @@
-$(function() {
-  'use strict'
+'use strict';
 
-  if ($(".compose-multiple-select").length) {
+(function () {
+
+  // select2
+  if (document.querySelector(".compose-multiple-select")) {
     $(".compose-multiple-select").select2();
   }
 
-  /*easymde editor*/
-  if ($("#easyMdeEditor").length) {
+  // easymde editor
+  const easyMdeEditorEl = document.querySelector('#easyMdeEditor');
+  if (easyMdeEditorEl) {
     var easymde = new EasyMDE({
-      element: $("#easyMdeEditor")[0]
+      element: easyMdeEditorEl
     });
   }
 
-});
+  // Check/uncheck all email-list-item checkboxes on main checkbox click/change 
+  const inboxCheckAll = document.querySelector('#inboxCheckAll');
+  const inboxListItemChecks = document.querySelectorAll('.email-list-item .form-check-input');
+  if (inboxCheckAll) {
+    inboxCheckAll.addEventListener('change', function (event) {
+      inboxListItemChecks.forEach(function (checkItem) {
+        if (inboxCheckAll.checked === true) { 
+          checkItem.checked = true;
+        } else if (inboxCheckAll.checked === false) {
+          checkItem.checked = false;
+        }
+      });
+    });
+  }
+
+})();

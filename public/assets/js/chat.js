@@ -1,31 +1,39 @@
-$(function() {
-  'use strict';
+'use strict';
+
+(function () {
 
   // Applying perfect-scrollbar 
-  if ($('.chat-aside .tab-content #chats').length) {
+  if (document.querySelector('.chat-aside .tab-content #chats')) {
     const sidebarBodyScroll = new PerfectScrollbar('.chat-aside .tab-content #chats');
   }
-  if ($('.chat-aside .tab-content #calls').length) {
+
+  if (document.querySelector('.chat-aside .tab-content #calls')) {
     const sidebarBodyScroll = new PerfectScrollbar('.chat-aside .tab-content #calls');
   }
-  if ($('.chat-aside .tab-content #contacts').length) {
+
+  if (document.querySelector('.chat-aside .tab-content #contacts')) {
     const sidebarBodyScroll = new PerfectScrollbar('.chat-aside .tab-content #contacts');
   }
 
-  if ($('.chat-content .chat-body').length) {
+  if (document.querySelector('.chat-content .chat-body')) {
     const sidebarBodyScroll = new PerfectScrollbar('.chat-content .chat-body');
   }
 
 
 
-  $( '.chat-list .chat-item' ).each(function(index) {
-    $(this).on('click', function(){
-      $('.chat-content').toggleClass('show');
+  // Show/hide 'chat-content' on small screen devices (max-width: 991px)
+  const chatListItem = document.querySelectorAll('.chat-list .chat-item');
+  const chatContent = document.querySelector('.chat-content');
+  const backToChatListButton = document.querySelector('#backToChatList');
+
+  chatListItem.forEach((item) => {
+    item.addEventListener('click', () => {
+      chatContent.classList.toggle('show');
     });
   });
 
-  $('#backToChatList').on('click', function(index) {
-    $('.chat-content').toggleClass('show');
+  backToChatListButton.addEventListener('click', () => {
+    chatContent.classList.toggle('show');
   });
 
-});
+})();

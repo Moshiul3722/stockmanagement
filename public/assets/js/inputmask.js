@@ -1,8 +1,11 @@
+// npm package: inputmask
+// github link: https://github.com/RobinHerbots/Inputmask
 
-(function($) {
-  'use strict';
+'use strict';
+
+(function () {
 
   // initializing inputmask
-  $(":input").inputmask();
+  $('input[data-inputmask]').inputmask();
 
-})(jQuery);
+})();
