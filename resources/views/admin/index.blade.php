@@ -6,8 +6,9 @@
         <div class="page-content">
 
             <div class="d-flex justify-content-between align-items-center flex-wrap grid-margin">
-                <div>
-                    <h4 class="mb-3 mb-md-0">Welcome to Dashboard</h4>
+                <div class="welcome-text">
+                    <h4 class="mb-3 mb-md-0">ভূমি মন্ত্রণালয়ের স্টোর ম্যানেজমেন্ট সিস্টেমে প্রশাসন-১ শাখাকে স্বাগতম
+                    </h4>
                 </div>
                 <div class="d-flex align-items-center flex-wrap text-nowrap">
                     <div class="input-group flatpickr w-200px me-2 mb-2 mb-md-0" id="dashboardDate">

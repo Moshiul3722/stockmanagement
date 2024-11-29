@@ -1,3 +1,89 @@
+@font-face {
+    font-family: "NikoshBAN";
+    font-style: normal;
+    font-weight: 600;
+    src: url("/public/fonts/NikoshBAN.ttf");
+}
+
+body {
+    font-family: "NikoshBAN";
+}
+
 .logo {
     width: 180px;
 }
+
+.page-wrapper .page-content {
+    padding: 1rem 0 !important;
+}
+
+/* CSS Animated Glowing Gradient Border Effects */
+
+.welcome-text {
+    position: relative;
+    width: 550px;
+    height: 45px;
+}
+
+.welcome-text::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: repeating-conic-gradient(
+        from var(--a),
+        #0f0,
+        #ff0,
+        #0ff,
+        #f0f,
+        #0ff
+    );
+    border-radius: 10px;
+    animation: rotating 4s linear infinite;
+}
+
+.welcome-text::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: repeating-conic-gradient(
+        from var(--a),
+        #0f0,
+        #ff0,
+        #0ff,
+        #f0f,
+        #0ff
+    );
+    border-radius: 10px;
+    animation: rotating 4s linear infinite;
+    filter: blur(10px);
+    opacity: 0.75;
+}
+
+.welcome-text > h4 {
+    color: #fff;
+    font-size: 22px;
+    padding: 5px 10px;
+    position: absolute;
+    inset: 4px;
+    background: #222;
+    border-radius: 8px;
+    z-index: 1;
+}
+
+@property --a {
+    syntax: "<angle>";
+    inherits: false;
+    initial-value: 0deg;
+}
+
+@keyframes rotating {
+    0% {
+        --a: 0deg;
+    }
+
+    100% {
+        --a: 360deg;
+    }
+}
+
+/* end CSS Animated Glowing Gradient Border Effects */
