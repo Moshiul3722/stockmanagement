@@ -27,6 +27,8 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
 
     Route::get('admin/logout', [AdminController::class, 'AdminLogout'])->name('admin.logout');
 });
+Route::get('admin/login', [AdminController::class, 'AdminLogin'])->name('admin.login');
+
 Route::middleware(['auth', 'role:customer'])->group(function () {
     Route::get('customer/dashboard', [CustomerController::class, 'CustomerDashboard'])
         ->name('customer.dashboard');
