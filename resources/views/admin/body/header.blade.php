@@ -3,7 +3,7 @@
         <div class="container">
             <div class="navbar-content">
 
-                <a href="#" class="navbar-brand d-none d-lg-flex">
+                <a href="{{ route('admin.dashboard') }}" class="navbar-brand d-none d-lg-flex">
                     <img src="{{ asset('assets/images/logo.png') }}" class="logo" alt="logo">
                 </a>
 
@@ -158,10 +158,40 @@
         <div class="container">
             <ul class="nav page-navigation">
                 <li class="nav-item">
-                    <a class="nav-link" href="dashboard.html">
+                    <a class="nav-link" href="{{ route('admin.dashboard') }}">
                         <i class="link-icon" data-feather="box"></i>
                         <span class="menu-title">ড্যাশবোর্ড</span>
                     </a>
+                </li>
+                {{-- <li class="nav-item {{ request()->routeIs('admin.daptarList*') ? 'active' : '' }}">
+                    <a class="nav-link" href="{{ route('admin.daptarList') }}">
+                        <i class="link-icon" data-feather="box"></i>
+                        <span class="menu-title">শাখা এন্ট্রি</span>
+                    </a>
+                </li> --}}
+
+                <li class="nav-item mega-menu">
+                    <a href="#" class="nav-link">
+                        <i class="link-icon" data-feather="book"></i>
+                        <span class="menu-title">দপ্তর/অনুবিভাগ/অধিশাখা/শাখা এন্ট্রি</span>
+                        <i data-feather="arrow-down"></i>
+                    </a>
+                    <div class="submenu {{ request()->routeIs('admin.section.*') ? 'active' : '' }}">
+                        <div class="col-group-wrapper row">
+                            <div class="col-group col-md-3">
+                                <a class="nav-link" href="{{ route('admin.section.daptarList') }}">দপ্তর</a>
+                            </div>
+                            <div class="col-group col-md-3">
+                                <a class="nav-link" href="{{ route('admin.section.wingList') }}">অনুবিভাগ</a>
+                            </div>
+                            <div class="col-group col-md-3">
+                                <a class="nav-link" href="{{ route('admin.section.subSectionList') }}">অধিশাখা</a>
+                            </div>
+                            <div class="col-group col-md-3">
+                                <a class="nav-link" href="{{ route('admin.section.sectionList') }}">শাখা</a>
+                            </div>
+                        </div>
+                    </div>
                 </li>
 
 

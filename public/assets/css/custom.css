@@ -61,12 +61,12 @@ body {
 
 .welcome-text > h4 {
     font-family: "SolaimanLipi";
-    color: #fff;
+    color: #222;
     font-size: 1rem;
     padding: 5px 10px;
     position: absolute;
     inset: 4px;
-    background: #222;
+    background: #fff;
     border-radius: 8px;
     z-index: 1;
 }
