@@ -36,8 +36,8 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
     Route::get('admin/section/wing/add', [SectionEntryController::class, 'WingAdd'])->name('admin.section.wingAdd');
     Route::get('admin/section/sub-section/list', [SectionEntryController::class, 'subSectionList'])->name('admin.section.subSectionList');
     Route::get('admin/section/sub-section/add', [SectionEntryController::class, 'subSectionAdd'])->name('admin.section.subSectionAdd');
-    Route::get('admin/section/add', [SectionEntryController::class, 'sectionAdd'])->name('admin.section.sectionAdd');
     Route::get('admin/section/list', [SectionEntryController::class, 'sectionList'])->name('admin.section.sectionList');
+    Route::get('admin/section/add', [SectionEntryController::class, 'sectionAdd'])->name('admin.section.sectionAdd');
 });
 Route::get('admin/login', [AdminController::class, 'AdminLogin'])->name('admin.login');
 
