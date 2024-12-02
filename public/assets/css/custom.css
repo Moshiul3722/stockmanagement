@@ -93,3 +93,7 @@ body {
     width: 155px !important;
     height: 38px !important;
 }
+
+.table > :not(caption) > * > * {
+    box-shadow: none !important;
+}

@@ -38,6 +38,18 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
     Route::get('admin/section/sub-section/add', [SectionEntryController::class, 'subSectionAdd'])->name('admin.section.subSectionAdd');
     Route::get('admin/section/list', [SectionEntryController::class, 'sectionList'])->name('admin.section.sectionList');
     Route::get('admin/section/add', [SectionEntryController::class, 'sectionAdd'])->name('admin.section.sectionAdd');
+
+    Route::get('admin/requisition/list', [SectionEntryController::class, 'requisitionList'])->name('admin.requisition.requisitionList');
+    Route::get('admin/requisition/add', [SectionEntryController::class, 'requisitionAdd'])->name('admin.requisition.requisitionAdd');
+
+    Route::get('admin/product-type/list', [SectionEntryController::class, 'productTypeList'])->name('admin.productType.list');
+    Route::get('admin/product-type/add', [SectionEntryController::class, 'productTypeAdd'])->name('admin.productType.add');
+
+    Route::get('admin/product/list', [SectionEntryController::class, 'productList'])->name('admin.product.list');
+    Route::get('admin/product/add', [SectionEntryController::class, 'productAdd'])->name('admin.product.add');
+
+    Route::get('admin/stock/list', [SectionEntryController::class, 'stockList'])->name('admin.stock.list');
+    Route::get('admin/stock/add', [SectionEntryController::class, 'stockAdd'])->name('admin.stock.add');
 });
 Route::get('admin/login', [AdminController::class, 'AdminLogin'])->name('admin.login');
 

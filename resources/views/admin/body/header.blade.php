@@ -194,6 +194,30 @@
                     </div>
                 </li>
 
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('admin.requisition.requisitionList') }}">
+                        <i class="link-icon" data-feather="box"></i>
+                        <span class="menu-title">অধিযাচনের ধরন</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('admin.productType.list') }}">
+                        <i class="link-icon" data-feather="box"></i>
+                        <span class="menu-title">মালামালের ধরন</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('admin.product.list') }}">
+                        <i class="link-icon" data-feather="box"></i>
+                        <span class="menu-title">মালামাল এন্ট্রি</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('admin.stock.list') }}">
+                        <i class="link-icon" data-feather="box"></i>
+                        <span class="menu-title">স্টোক সংরক্ষণ</span>
+                    </a>
+                </li>
 
 
 

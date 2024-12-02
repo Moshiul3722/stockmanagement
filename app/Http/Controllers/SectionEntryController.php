@@ -38,4 +38,36 @@ class SectionEntryController extends Controller
     {
         return view('admin.section.add_section');
     }
+    public function requisitionList()
+    {
+        return view('admin.section.list_requisition');
+    }
+    public function requisitionAdd()
+    {
+        return view('admin.section.add_requisition');
+    }
+    public function productTypeList()
+    {
+        return view('admin.section.list_productType');
+    }
+    public function productTypeAdd()
+    {
+        return view('admin.section.add_productType');
+    }
+    public function productList()
+    {
+        return view('admin.section.list_product');
+    }
+    public function productAdd()
+    {
+        return view('admin.section.add_product');
+    }
+    public function stockList()
+    {
+        return view('admin.section.list_stock');
+    }
+    public function stockAdd()
+    {
+        return view('admin.section.add_stock');
+    }
 }
