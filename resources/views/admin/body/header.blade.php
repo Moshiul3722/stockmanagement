@@ -215,7 +215,7 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('admin.stock.list') }}">
                         <i class="link-icon" data-feather="box"></i>
-                        <span class="menu-title">স্টোক সংরক্ষণ</span>
+                        <span class="menu-title">মালামাল সংরক্ষণ</span>
                     </a>
                 </li>
 

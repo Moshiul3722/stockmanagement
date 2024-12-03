@@ -70,4 +70,8 @@ class SectionEntryController extends Controller
     {
         return view('admin.section.add_stock');
     }
+    public function singleProductList()
+    {
+        return view('admin.stock.list_single_product');
+    }
 }

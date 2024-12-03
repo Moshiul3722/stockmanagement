@@ -25,13 +25,16 @@
                 <div class="col-md-12 stretch-card">
                     <div class="card">
                         <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center flex-wrap grid-margin">
+                                <span class="left-content">এয়ার ফ্রেশনার</span>
+                                <span class="right-content">সর্বমোট= ২০০টি</span>
+                            </div>
 
                             <table class="table table-bordered table-hover">
                                 <thead>
                                     <tr>
                                         <th>#</th>
-                                        <th>মালামালের নাম</th>
-                                        <th>মালামালের ধরন</th>
+                                        <th>মালামালের গ্রহণের তারিখ</th>
                                         <th>পরিমান</th>
                                         <th>কর্মপ্রক্রিয়া</th>
                                     </tr>
@@ -40,21 +43,8 @@
                                     <tr class="table-active">
                                         <td>১</td>
                                         <td>
-                                            <a href="{{ route('admin.singleProduct.list') }}">এয়ারফ্রেশনার</a>
+                                            ১০-১২-২০২৪
                                         </td>
-                                        <td>টেন্ডারে প্রাপ্ত মালামাল</td>
-                                        <td>২০০টি</td>
-                                        <td>
-                                            <a class="btn btn-primary btn-xs" href="#"><i data-feather="edit"></i>
-                                                সম্পাদন করুন</a>&nbsp;&nbsp;
-                                            <a class="btn btn-danger btn-xs" href="#"><i data-feather="trash-2"></i>
-                                                মুছুন</a>
-                                        </td>
-                                    </tr>
-                                    <tr class="table-active">
-                                        <td>১</td>
-                                        <td>এরোসল</td>
-                                        <td>টেন্ডারে প্রাপ্ত মালামাল</td>
                                         <td>১২০টি</td>
                                         <td>
                                             <a class="btn btn-primary btn-xs" href="#"><i data-feather="edit"></i>
@@ -63,6 +53,33 @@
                                                 মুছুন</a>
                                         </td>
                                     </tr>
+                                    <tr class="table-active">
+                                        <td>২</td>
+                                        <td>
+                                            ১০-১২-২০২৪
+                                        </td>
+                                        <td>১২০টি</td>
+                                        <td>
+                                            <a class="btn btn-primary btn-xs" href="#"><i data-feather="edit"></i>
+                                                সম্পাদন করুন</a>&nbsp;&nbsp;
+                                            <a class="btn btn-danger btn-xs" href="#"><i data-feather="trash-2"></i>
+                                                মুছুন</a>
+                                        </td>
+                                    </tr>
+                                    <tr class="table-active">
+                                        <td>৩</td>
+                                        <td>
+                                            ১০-১২-২০২৪
+                                        </td>
+                                        <td>১৫০টি</td>
+                                        <td>
+                                            <a class="btn btn-primary btn-xs" href="#"><i data-feather="edit"></i>
+                                                সম্পাদন করুন</a>&nbsp;&nbsp;
+                                            <a class="btn btn-danger btn-xs" href="#"><i data-feather="trash-2"></i>
+                                                মুছুন</a>
+                                        </td>
+                                    </tr>
+
 
 
                                 </tbody>

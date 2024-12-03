@@ -50,6 +50,8 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
 
     Route::get('admin/stock/list', [SectionEntryController::class, 'stockList'])->name('admin.stock.list');
     Route::get('admin/stock/add', [SectionEntryController::class, 'stockAdd'])->name('admin.stock.add');
+
+    Route::get('admin/single_product/list', [SectionEntryController::class, 'singleProductList'])->name('admin.singleProduct.list');
 });
 Route::get('admin/login', [AdminController::class, 'AdminLogin'])->name('admin.login');
 
