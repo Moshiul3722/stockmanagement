@@ -4,6 +4,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\SectionEntryController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -53,6 +54,9 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
 
     Route::get('admin/single_product/list', [SectionEntryController::class, 'singleProductList'])->name('admin.singleProduct.list');
 });
+
+Route::get('/profile', [UserController::class, 'UserProfile'])->name('user.profile');
+
 Route::get('admin/login', [AdminController::class, 'AdminLogin'])->name('admin.login');
 
 
