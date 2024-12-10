@@ -28,7 +28,7 @@
 
 
             <div class="row">
-                <div class="col-md-12 stretch-card">
+                <div class="col-md-8 stretch-card">
                     <div class="card">
                         <div class="card-body">
                             {{-- <h6 class="card-title">Form Grid</h6> --}}
@@ -62,28 +62,57 @@
                                     </div><!-- Col -->
                                     <div class="col-sm-4">
                                         <div class="mb-3">
-                                            <label class="form-label">Zip</label>
-                                            <input type="text" class="form-control" placeholder="Enter zip code">
+                                            <div class="mb-3">
+                                                <label class="form-label">ই-মেইল</label>
+                                                <input type="email" class="form-control" placeholder="ই-মেইল প্রদান করুন">
+                                            </div>
                                         </div>
                                     </div><!-- Col -->
                                 </div><!-- Row -->
                                 <div class="row">
                                     <div class="col-sm-6">
                                         <div class="mb-3">
-                                            <label class="form-label">Email address</label>
-                                            <input type="email" class="form-control" placeholder="Enter email">
+                                            <label class="form-label">পাসওয়ার্ড</label>
+                                            <input type="password" class="form-control" autocomplete="off"
+                                                placeholder="পাসওয়ার্ড">
                                         </div>
                                     </div><!-- Col -->
                                     <div class="col-sm-6">
                                         <div class="mb-3">
-                                            <label class="form-label">Password</label>
+                                            <label class="form-label">পুনঃপাসওয়ার্ড</label>
                                             <input type="password" class="form-control" autocomplete="off"
-                                                placeholder="Password">
+                                                placeholder="পুনঃপাসওয়ার্ড">
                                         </div>
                                     </div><!-- Col -->
                                 </div><!-- Row -->
                             </form>
-                            <button type="button" class="btn btn-primary submit">Submit form</button>
+                            <button type="button" class="btn btn-primary submit">সংরক্ষণ করুন</button>
+                        </div>
+                    </div>
+                </div>
+                {{-- </div>
+
+            <div class="row"> --}}
+                <div class="col-md-4 stretch-card">
+                    <div class="card">
+                        <div class="card-body">
+
+                            <div class="d-flex align-content-around flex-wrap">
+                                <div class="col-sm-12">
+                                    <div class="mb-3">
+                                        <label class="form-label">ছবি প্রদান করুন</label>
+                                        <input type="file" name="" id="">
+                                    </div>
+                                </div>
+                                <div class="col-sm-12">
+                                    <div class="mb-3">
+                                        <label class="form-label">স্বাক্ষর প্রদান করুন</label>
+                                        <input type="file" name="" id="">
+                                    </div>
+                                </div>
+                            </div>
+
+
                         </div>
                     </div>
                 </div>
